@@ -312,5 +312,8 @@ header{
 	left:0px;
 	top: 45px;
 	font-weight: bold;
-}
+	}
+	.familia{
+		width: 80%;
+	}
 }

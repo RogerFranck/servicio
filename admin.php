@@ -16,6 +16,7 @@
  <head>
  	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="utf-8">
+	
 	<link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="CSS/admin.css">
  	<title>DOCENTES</title>
@@ -33,25 +34,25 @@
 			<center>
 				<img src="CSS/hombre.svg" class="usuimg">
 			</center>
-				<a href="adminUsuarios.php" class="usutxt">USUARIOS</a>
+				<a href="Admin-Usuarios/adminUsuarios.php" class="usutxt">USUARIOS</a>
 		</div>
 		<div class="propiedades">
 			<center>
 				<img src="CSS/calendario.svg" class="primg">
 			</center>
-			<a href="#" class="prtxt">PROPIEDADES</a>
+			<a href="Admin-Propiedades/adminPropiedades.php" class="prtxt">PROPIEDADES</a>
 		</div>
 		<div class="grupos">
 			<center>
 				<img src="CSS/equipo.svg" class="gpimg">
 			</center>
-			<a href="#" class="gptxt">GRUPOS</a>
+			<a href="Admin-Grupos/adminGrupo.php" class="gptxt">GRUPOS</a>
 		</div>
 		<div class="materias">
 			<center>
 				<img src="CSS/profesor.svg" class="gpimg">
 			</center>
-			<a href="#" class="matxt">MATERIAS</a>
+			<a href="Admin-Materias/adminMateria.php" class="matxt">MATERIAS</a>
 		</div>
 
 	</div>

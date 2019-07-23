@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-04-2019 a las 03:31:13
+-- Tiempo de generación: 17-07-2019 a las 04:01:13
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -32,7 +32,7 @@ CREATE TABLE `ynaalumnos` (
   `id_alumno` int(11) NOT NULL,
   `id_persona` int(11) NOT NULL,
   `matricula` int(11) NOT NULL,
-  `id_grupos` varchar(30) COLLATE utf8_spanish_ci NOT NULL
+  `id_grupos` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -40,10 +40,7 @@ CREATE TABLE `ynaalumnos` (
 --
 
 INSERT INTO `ynaalumnos` (`id_alumno`, `id_persona`, `matricula`, `id_grupos`) VALUES
-(1, 10, 12345, '6 B Programacion'),
-(2, 12, 12346, '6 B Programacion'),
-(3, 13, 12347, '6 A Programacion'),
-(4, 14, 12348, '6 B Programacion');
+(1, 4, 123456, 1);
 
 -- --------------------------------------------------------
 
@@ -61,13 +58,8 @@ CREATE TABLE `ynaasignatura` (
 --
 
 INSERT INTO `ynaasignatura` (`id_asignatura`, `materia`) VALUES
-(1, 'MATEMATICAS'),
-(2, 'PROBABILIDAD'),
-(3, 'FILOSOFIA'),
-(4, 'FISICA'),
-(5, 'TUTORIA'),
-(6, 'SUBMODULO1'),
-(7, 'SUBMODULO2');
+(1, 'Calculo INT.'),
+(2, 'Submodulo 1');
 
 -- --------------------------------------------------------
 
@@ -85,8 +77,7 @@ CREATE TABLE `ynadocentes` (
 --
 
 INSERT INTO `ynadocentes` (`id_docente`, `id_persona`) VALUES
-(3, 9),
-(4, 11);
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -98,7 +89,7 @@ CREATE TABLE `ynadocentesasignatura` (
   `id_docenteasignatura` int(11) NOT NULL,
   `id_docente` int(11) NOT NULL,
   `id_asignatura` int(11) NOT NULL,
-  `id_grupos` varchar(30) COLLATE utf8_spanish_ci NOT NULL
+  `id_grupos` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -106,11 +97,9 @@ CREATE TABLE `ynadocentesasignatura` (
 --
 
 INSERT INTO `ynadocentesasignatura` (`id_docenteasignatura`, `id_docente`, `id_asignatura`, `id_grupos`) VALUES
-(1, 3, 1, '6 B Programacion'),
-(2, 3, 2, '6 B Programacion'),
-(3, 3, 3, '6 A Programacion'),
-(5, 4, 2, '6 A Programacion'),
-(6, 3, 1, '6 A Programacion');
+(1, 1, 1, 1),
+(2, 1, 2, 2),
+(3, 1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -119,7 +108,7 @@ INSERT INTO `ynadocentesasignatura` (`id_docenteasignatura`, `id_docente`, `id_a
 --
 
 CREATE TABLE `ynagrupos` (
-  `id_grupos` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `id_grupos` int(11) NOT NULL,
   `semestre` int(11) NOT NULL,
   `grupo` text COLLATE utf8_spanish_ci NOT NULL,
   `especialidad` text COLLATE utf8_spanish_ci NOT NULL,
@@ -131,8 +120,8 @@ CREATE TABLE `ynagrupos` (
 --
 
 INSERT INTO `ynagrupos` (`id_grupos`, `semestre`, `grupo`, `especialidad`, `turno`) VALUES
-('6 A Programacion', 6, 'A', 'Programacion', 'Matutino'),
-('6 B Programacion', 6, 'B', 'Programacion', 'Matutino');
+(1, 6, 'B', 'Programacion', 'Matutino'),
+(2, 6, 'A', 'Gericultura', 'Matutino');
 
 -- --------------------------------------------------------
 
@@ -142,7 +131,7 @@ INSERT INTO `ynagrupos` (`id_grupos`, `semestre`, `grupo`, `especialidad`, `turn
 
 CREATE TABLE `ynalista` (
   `id_lista` int(11) NOT NULL,
-  `id_grupos` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `id_grupos` int(30) NOT NULL,
   `id_asignatura` int(11) NOT NULL,
   `id_docente` int(11) NOT NULL,
   `id_alumno` int(11) NOT NULL,
@@ -156,18 +145,8 @@ CREATE TABLE `ynalista` (
 --
 
 INSERT INTO `ynalista` (`id_lista`, `id_grupos`, `id_asignatura`, `id_docente`, `id_alumno`, `asistencia`, `fecha`, `hora`) VALUES
-(49, '6 B Programacion', 1, 3, 1, 'S', '9/Abril/2019', '18:23'),
-(50, '6 B Programacion', 1, 3, 2, 'S', '9/Abril/2019', '18:23'),
-(51, '6 B Programacion', 1, 3, 4, 'S', '9/Abril/2019', '18:23'),
-(52, '6 B Programacion', 1, 3, 1, 'N', '9/Abril/2019', '18:23'),
-(53, '6 B Programacion', 1, 3, 2, 'N', '9/Abril/2019', '18:23'),
-(54, '6 B Programacion', 1, 3, 4, 'N', '9/Abril/2019', '18:23'),
-(55, '6 B Programacion', 1, 3, 1, 'N', '9/Abril/2019', '19:16'),
-(56, '6 B Programacion', 1, 3, 2, 'N', '9/Abril/2019', '19:16'),
-(57, '6 B Programacion', 1, 3, 4, 'N', '9/Abril/2019', '19:16'),
-(58, '6 B Programacion', 1, 3, 1, 'N', '9/Abril/2019', '19:16'),
-(59, '6 B Programacion', 1, 3, 2, 'N', '9/Abril/2019', '19:16'),
-(60, '6 B Programacion', 1, 3, 4, 'N', '9/Abril/2019', '19:16');
+(1, 1, 1, 1, 1, 'S', '16/Julio/2019', '18:59'),
+(2, 1, 1, 1, 1, 'S', '16/Julio/2019', '20:35');
 
 -- --------------------------------------------------------
 
@@ -188,12 +167,9 @@ CREATE TABLE `ynapersonas` (
 --
 
 INSERT INTO `ynapersonas` (`id_persona`, `Apellido1`, `Apellido2`, `Nombres`, `CURP`) VALUES
-(9, 'Almeida', 'Ramos', 'Roger Francisco', '1Q1Q'),
-(10, 'Bacab', 'Canul', 'Romel', 'NoSeMiCurp'),
-(11, 'AYALA', 'PINEDA', 'MAESTRO', 'NoSeMiCurp'),
-(12, 'Ceballos', 'Lugo', 'Andres', '1S1S1S'),
-(13, 'Gil', 'Montejo', 'Daniela', '1P1P'),
-(14, 'Giovani', 'Cortazar', 'Manuel', '1A1A');
+(1, 'Principal', 'Del sistema', 'Admin', 'SinCurp'),
+(2, 'Principal', 'De Pruebas', 'Maestro', 'Desconocido'),
+(4, 'Primero', 'De Pruebas', 'Alumno', 'Desconocido2');
 
 -- --------------------------------------------------------
 
@@ -214,13 +190,9 @@ CREATE TABLE `ynausuarios` (
 --
 
 INSERT INTO `ynausuarios` (`id_usuario`, `id_persona`, `clase`, `Usuario`, `Pass`) VALUES
-(1, 9, 1, 'Roger', 'hola123'),
-(2, 10, 2, 'Romel', 'hola123'),
-(3, 11, 1, 'Maestro', 'hola123'),
-(4, 12, 2, 'Andres', 'hola123'),
-(5, 13, 2, 'Daniela', 'hola123'),
-(6, 14, 2, 'Manuel', 'hola123'),
-(7, 9, 0, 'Admin', 'hola123');
+(1, 1, 0, 'Admin', 'SinCurp'),
+(2, 2, 1, 'Maestro', 'Desconocido'),
+(3, 4, 2, 'Alumno', 'Desconocido2');
 
 --
 -- Índices para tablas volcadas
@@ -293,43 +265,49 @@ ALTER TABLE `ynausuarios`
 -- AUTO_INCREMENT de la tabla `ynaalumnos`
 --
 ALTER TABLE `ynaalumnos`
-  MODIFY `id_alumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_alumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `ynaasignatura`
 --
 ALTER TABLE `ynaasignatura`
-  MODIFY `id_asignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_asignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ynadocentes`
 --
 ALTER TABLE `ynadocentes`
-  MODIFY `id_docente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_docente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `ynadocentesasignatura`
 --
 ALTER TABLE `ynadocentesasignatura`
-  MODIFY `id_docenteasignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_docenteasignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `ynagrupos`
+--
+ALTER TABLE `ynagrupos`
+  MODIFY `id_grupos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `ynalista`
 --
 ALTER TABLE `ynalista`
-  MODIFY `id_lista` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id_lista` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ynapersonas`
 --
 ALTER TABLE `ynapersonas`
-  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `ynausuarios`
 --
 ALTER TABLE `ynausuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas

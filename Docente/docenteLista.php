@@ -13,10 +13,15 @@
 		$v2 = $_GET['pat'];
 
 	} else {
-		header("Location: index.php");
+		header("Location: ../index.php");
 	}
 
 	$conexion = mysqli_connect("localhost","root","","yna") or die ("problemas con la conexion");
+
+	$sacagrupo = mysqli_query($conexion,"SELECT * FROM `ynagrupos` WHERE `id_grupos` = '".$v2."'");
+	$mostrar= mysqli_fetch_array($sacagrupo);
+
+
 	//SACAR ALUMNOS
 	$sacalumnos = mysqli_query($conexion,"SELECT ynapersonas.Apellido1, ynapersonas.Apellido2, ynapersonas.Nombres, ynaalumnos.id_alumno  FROM ynapersonas
 										  INNER JOIN ynausuarios ON ynausuarios.id_persona=ynapersonas.id_persona 
@@ -60,8 +65,8 @@
 	<title>LISTA</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="CSS/Lista.css">
+	<link rel="shortcut icon" href="../CSS/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="../CSS/Lista.css">
  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -76,10 +81,10 @@
 	</header>
 	<div class="Arranque">
 		<div class="inicio">
-			<h1 class="Materia"><?php echo $v1 ?> - <?php echo $v2 ?></h1>
+			<h1 class="Materia"><?php echo $v1 ?> - <?php echo $mostrar['semestre']." ".$mostrar['grupo']." ".$mostrar['especialidad'] ?></h1>
 		</div>
 		<div class="home">
-			<a href="docente.php"><img src="CSS/home.svg"></a>
+			<a href="docente.php"><img src="../CSS/home.svg"></a>
 		</div>
 	</div>
 
@@ -319,7 +324,7 @@
 			<input type="button" form="formi" value="GUARDAR" class="out2"  onclick="GUARDAR()">
 			</div>
 			<input type="button" value="CONSULTAR" class="out3" onclick="location.href='docenteConsulta.php?mat=<?php echo $v1 ?>&pat=<?php echo $v2 ?>'">
-			<input type="button" value="SALIR" class="out" onclick="location.href='logout.php'">
+			<input type="button" value="SALIR" class="out" onclick="location.href='../logout.php'">
 		</div>
 	</div>
 </body>

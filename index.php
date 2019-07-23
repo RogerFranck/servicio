@@ -3,10 +3,10 @@
 	session_start();
 	//COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
 	if (isset($_SESSION['docente'])) {
-		header("Location: docente.php");
+		header("Location: Docente/docente.php");
 	} 
 	if (isset($_SESSION['alumno'])) {
-		header("Location: alumnos.php");
+		header("Location: Alumno/alumnos.php");
 	} 
 	if (isset($_SESSION['admin'])) {
 		header("Location: admin.php");
@@ -126,7 +126,7 @@ if ($_POST) {
 				$raw = mysqli_fetch_array($quera);
 				//ALMACENA EL ID DEL DOCENTE
 				$_SESSION['identificadordocente'] = $raw['id_docente'];
-				header("location: docente.php");
+				header("location: Docente/docente.php");
 			}
 			//ALUMNOS
 			if ($row['clase']==2) {
@@ -142,7 +142,7 @@ if ($_POST) {
 				$_SESSION['grupoperte'] = $ruw['id_grupos'];
 				//ALMACENA EL ID DEL ALUMNO
 				$_SESSION['unialumn'] = $ruw['id_alumno'];
-				header("location: alumnos.php");
+				header("location: Alumno/alumnos.php");
 			}
 		}else{
 			echo '<script>document.getElementById("control").innerHTML = "LA CONTRASEÑA ES INCORRECTA"</script>';

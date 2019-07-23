@@ -8,10 +8,13 @@
 		$a2 = $_SESSION['apellidodosdocente'];
 		$identi = $_SESSION['grupoperte'];
 	} else {
-		header("Location: index.php");
+		header("Location: ../index.php");
 	}
 
 	$conexion = mysqli_connect("localhost","root","","yna") or die ("problemas con la conexion");
+
+	$sacagrupo = mysqli_query($conexion,"SELECT * FROM `ynagrupos` WHERE `id_grupos` = '".$identi."'");
+	$mostrar= mysqli_fetch_array($sacagrupo);
 
 	$result = mysqli_query($conexion,"SELECT ynaasignatura.materia, ynadocentesasignatura.id_docente FROM ynaasignatura JOIN ynadocentesasignatura ON ynaasignatura.id_asignatura = ynadocentesasignatura.id_asignatura where ynadocentesasignatura.id_grupos = '".$identi."'");
 
@@ -47,8 +50,8 @@
  <head>
  	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="CSS/alumnos.css">
+	<link rel="shortcut icon" href="../CSS/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="../CSS/alumnos.css">
  	<title>DOCENTES</title>
  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -59,7 +62,7 @@
 		<h1>CETIS 112</h1>
 	</header>
 	<br>
-	<h1 class="tit"><?php echo $identi ?>:</h1>
+	<h1 class="tit"><?php echo $mostrar['semestre']." ".$mostrar['grupo']." ".$mostrar['especialidad'] ?>:</h1>
 	<br>
 	<div class="menu" id="menu">
 
@@ -67,7 +70,7 @@
 
 	<div class="salir">
 		<p class="perfil" id="p"><?php echo $p. " " .$a1. " " .$a2 ?></p>
-		<input type="button" value="SALIR" class="out" onclick="location.href='logout.php'">
+		<input type="button" value="SALIR" class="out" onclick="location.href='../logout.php'">
 	</div>
 </body>
 <script type="text/javascript">

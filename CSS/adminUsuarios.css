@@ -98,6 +98,7 @@ header{
 
 }
 .centro{
+
 	display: flex;
 	justify-content: center;
 }
@@ -130,6 +131,17 @@ label{
 	padding: 10px;
 	border-radius: 10px 10px 10px 10px;
 }
+.table{
+	width: 100%;
+}
+.papas{
+	display: flex;
+}
+#aqui{
+	position: relative;
+	margin-left: 15px;
+	top: 8px;
+}
 #OK{
 	width: 20%;
 	background:black;
@@ -148,3 +160,19 @@ label{
 	#OK:hover{
 		background:#828282;
 	}
+
+@media screen and (max-width: 500px){
+
+
+	.formulario{
+		width: 90%;
+	}
+	.out{
+		width: 30%;
+	}
+	.todoenuno{
+		width: 100%;
+	}
+
+
+}

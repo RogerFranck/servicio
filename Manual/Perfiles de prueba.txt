@@ -1,0 +1,18 @@
+Para el perfil de administrador:
+
+Usuario: Admin
+Contraseña: SinCurp
+
+Para el perfil de maestro:
+
+Usuario: Maestro
+Contraseña: Desconocido
+
+Para el perfil de Alumno:
+
+Usuario: Alumno
+Contraseña: Desconocido2
+
+(IMPORTANTE RESPETAR LAS MAYUSCULAS EN LAS CONTRASEÑAS)
+
+by: Roger Francisco Almyeda Ramos - Programacion 
