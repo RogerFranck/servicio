@@ -1,0 +1,140 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	width: 100%;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.home{
+	width:100%;
+	display: flex;
+	justify-content:space-between;
+}
+.hi{
+	width: 45px;
+	position: relative;
+	right:20px;
+}
+.ho{
+	width: 45px;
+	position: relative;
+	left: 20px;
+}
+
+.salida{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	top: 40px;
+}
+.nada{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.salir{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+	.perfil{
+		font-weight: bold;
+		position: relative;
+		margin-left: 15px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.out{
+		width: 10%;
+		background:#800000;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+.formulario{
+	width: 30%;
+	height: 470px;
+	position: relative;
+	top: 30px;
+	margin-bottom:40px;
+	border-radius: 10px 10px 10px 10px;
+	background-color: red;
+}
+.formi{
+	width:100%;
+	background-color:white;
+	height: 470px;
+	float: right;
+	border:solid gray 1px;
+	border-radius: 10px 10px 10px 10px; 
+	box-shadow: 1px 1px 2px 2px gray;
+
+}
+.centro{
+	display: flex;
+	justify-content: center;
+}
+.txt{
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	margin: 20px;
+}
+label{
+	font-family: 'open sans', sans-serif;
+	position: relative;
+	margin: 20px;
+	font-weight: bold;
+}
+.caja{
+	font-family: 'raleway', sans-serif;
+	position: relative;
+	margin-left:20px;
+	margin-top: 0px;
+	width: 80%;
+	border:none;
+	border-bottom: 1px solid black;
+	outline: none;
+	height: 30px;
+}
+.ele{
+	position: relative;
+	margin-left: 20px;
+	top: 30px;
+	padding: 10px;
+	border-radius: 10px 10px 10px 10px;
+}
+#OK{
+	width: 20%;
+	background:black;
+	padding: 10px;
+	border-radius: 10px 10px 10px 10px;
+	border:none;
+	color: white;
+	font-size: 15px;
+	position: relative;
+	top: 30px;
+	float: right;
+	right: 50px;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+}
+	#OK:hover{
+		background:#828282;
+	}

@@ -1,0 +1,73 @@
+*{
+
+	margin: 0;
+	padding:0;
+}
+.BOX{
+	width: 90%;
+	margin-bottom:30px;
+	border:none;
+	border-bottom: 1px solid black;
+	outline: none;
+	height: 40px;
+}
+		#OK{
+			width: 20%;
+			background:black;
+			padding: 10px;
+			border-radius: 10px 10px 10px 10px;
+			border:none;
+			color: white;
+			font-size: 15px;
+			position: relative;
+			top: 15px;
+			float: right;
+			right: 50px;
+			cursor: pointer;
+			font-family: 'Roboto', sans-serif;
+		}
+			#OK:hover{
+				background:#828282;
+			}
+.olvido{
+	color:gray;
+	position: relative;
+	top: 20px;
+	left:4%;
+	text-decoration: none;
+}
+	.olvido:hover{
+		color: black;
+		font-weight: bold;
+	}
+.info{
+	position: relative;
+	left:4%;
+	font-weight: bold;
+	top: 50px;
+	font-family: 'Roboto', sans-serif;
+}
+.text-login{
+	position: relative;
+	top: 25px;
+	font-size: 45px;
+}
+.formulario-bajo{
+	position: relative;
+	top: 5px;
+}
+.formulario-alto{
+	position: relative;
+	bottom:3em;
+
+}
+#control{
+	position: relative;
+	top: 40px;
+	font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 500px){
+	#OK{
+		width: 30%;
+	}
+}

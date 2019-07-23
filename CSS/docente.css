@@ -1,0 +1,134 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	width: 100%;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+#menu{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.Bx-mayor{
+	width: 22%;
+	height: 300px;
+	margin: 20px;
+	background-color: white;
+	border-radius: 30px 30px 30px 30px;
+}
+	.bx-img{
+		width: 100%;
+		height: 100px;
+		background-image: url("tics.jpg");
+		background-size: 100%;
+		border-radius: 27px 27px 0px  0px;
+		border:solid;
+		border-width: 2px;
+		border-color:#C0C0C0;
+	}
+	.bx-info{
+		width: 100%;
+		height: 150px;
+		border:solid;
+		border-top: 0;
+		border-width: 2px;
+		border-color:#C0C0C0;
+	}
+	.bx-btn{
+		width: 100%;
+		height: 50px;
+		border:solid;
+		border-top: 0;
+		border-width: 2px;
+		border-color:#C0C0C0;
+		border-radius: 0px 0px 27px  27px;
+	}
+	.Mt-name{
+		color: white;
+		position: relative;
+		top: 15px;
+		left:20px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.Gp-text{
+		position: relative;
+		top:15px;
+		left:1em;
+		font-family: 'Raleway', sans-serif;
+	}
+	.Gp-inf{
+		font-family: 'Raleway', sans-serif;
+		position: relative;
+		top:15px;
+		left:1em;
+		margin-top:5px;
+	}
+	.btn-inicio{
+		text-decoration: none;
+		color: black;
+		position: relative;
+		top: 15px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+	}
+.salir{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	top: 170px;
+}
+	.perfil{
+		font-weight: bold;
+		position: relative;
+		margin-left: 15px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.out{
+		width: 10%;
+		background:#800000;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+@media screen and (max-width: 1200px){
+	.Bx-mayor{
+		width: 35%;
+	}
+	#menu{
+		justify-content: center;
+	}
+}	
+@media screen and (max-width: 500px){
+
+	.menu{
+		display: block;
+	}
+	.Bx-mayor{
+		width: 90%;
+	}
+	.out{
+		width:30%; 
+	}
+	.salir{
+		top: 0;
+	}
+
+}

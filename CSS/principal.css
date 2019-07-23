@@ -1,0 +1,96 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	width: 100%;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.maestros{
+	width: 40%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin: 15px;
+	border-radius: 30px 30px 30px 30px;
+}
+	.maestros .img-maestros{
+		width: 100%;
+		background-color: #566E7A;	
+		height: 200px;
+		border-radius: 27px 27px 0px  0px;
+		border:solid;
+		border-width: 2px;
+		border-color:#C0C0C0;
+	}
+	.maestros .img-maestros h2{
+		position: relative;
+		color: white;
+		left: 25px;
+		top: 85px;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.img{
+		position: relative;
+		top: 71px;
+		float: right;	
+	}
+	.maestros .btn-maestros{
+		width: 100%;
+		height: 300px;
+		border-radius: 0px 0px 27px  27px;
+		border:solid;
+		border-top: 0;
+		border-width: 2px;
+		border-color:#C0C0C0;
+
+	}
+		.maestros .btn-maestros input{
+			position: relative;
+			top: 48px;
+		}
+.todo{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top:25px;
+}
+@media screen and (max-width: 1100px){
+	.todo{
+	width: 100%;
+	display:flex;
+	justify-content: center;
+	margin-top:40px;
+	}
+	.maestros{
+		width: 70%;
+		height: 400px;
+		background-color: white;
+		float: none;
+		margin: 15px;
+		border-radius: 30px 30px 30px 30px;
+	}
+}
+@media screen and (max-width: 500px){
+	
+	.todo{
+	width: 100%;
+	display:block;
+	margin-top:40px;
+	}
+	.maestros{
+		width: 90%;
+		height: 400px;
+		background-color: white;
+		float: none;
+		margin: 15px;
+		border-radius: 30px 30px 30px 30px;
+	}
+
+}

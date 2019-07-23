@@ -1,0 +1,64 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	width: 100%;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.salida{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	top: 40px;
+}
+.nada{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.salir{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+	.perfil{
+		font-weight: bold;
+		position: relative;
+		margin-left: 15px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.out{
+		width: 10%;
+		background:#800000;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.home{
+	width:100%;
+	display: flex;
+	justify-content:flex-end;
+}
+.home img{
+	position: relative;
+	right: 50px;
+	width: 45px;
+}

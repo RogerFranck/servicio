@@ -1,0 +1,246 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	width: 100%;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.Arranque{
+	width: 100%;
+	position: relative;
+	margin-top:20px;
+	margin-bottom: 20px;
+	display: flex;
+}
+.inicio{
+	width:50%;
+	display: flex;
+	justify-content:flex-start;
+}
+.home{
+	width:50%;
+	display: flex;
+	justify-content:flex-end;
+}
+.home img{
+	position: relative;
+	right: 50px;
+	width: 45px;
+}
+.Materia{
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	left:25px;
+}
+.centro{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin-top:50px;
+}	
+	.Tb-mayor{
+		width: 55%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+		.Nombre{
+			width:50%;	
+			background-color: black;
+			color: white;
+			padding-bottom:5px; 
+			padding-top:5px;
+			border:solid;
+			border-width: 2px;
+			border-color:#C0C0C0;
+		}
+			.Nombre h3{
+				font-family: 'Roboto', sans-serif;
+				margin-left: 15px;
+			}
+		.Fecha{
+			width:33%;	
+			background-color: black;
+			color: white;
+			padding-bottom:5px; 
+			padding-top:5px;
+			border:solid;
+			border-width: 2px;
+			border-color:#C0C0C0;
+		}
+			.Fecha h3{
+				font-family: 'Roboto', sans-serif;
+				margin-left: 15px;
+			}	
+		.Hora{
+			width:33%;	
+			background-color: black;
+			color: white;
+			padding-bottom:5px; 
+			padding-top:5px;
+			border:solid;
+			border-width: 2px;
+			border-color:#C0C0C0;
+		}
+			.Hora h3{
+				font-family: 'Roboto', sans-serif;
+				margin-left: 15px;
+			}
+		.Asistencia{
+			width: 32.6%;
+			background-color: black;
+			color: white;
+			border:solid;
+			border-width: 2px;
+			border-color:#C0C0C0;
+			padding-bottom:5px; 
+			padding-top:5px;
+			border-left: 0px;
+		}
+			.Asistencia h3{
+				font-family: 'Roboto', sans-serif;
+				margin-left: 15px;
+			}	
+.egt{
+	width:99.3%;
+	border:solid;
+	border-top: 0px;
+	border-width: 2px;
+	border-color:#C0C0C0;
+}
+.na{
+	width:50%;	
+	background-color:white;
+	padding-bottom:5px; 
+	padding-top:5px;
+	border-bottom: solid;
+	border-width: 2px;
+	border-color:#C0C0C0;
+	font-family: 'Roboto', sans-serif;
+}
+.fe{
+	width:16%;	
+	background-color:white;
+	padding-bottom:5px; 
+	padding-top:5px;
+	border-bottom: solid;
+	border-width: 2px;
+	border-color:#C0C0C0;
+	font-family: 'Roboto', sans-serif;
+}
+.ho{
+	width:16%;	
+	background-color:white;
+	padding-bottom:5px; 
+	padding-top:5px;
+	border-bottom: solid;
+	border-width: 2px;
+	border-color:#C0C0C0;
+	font-family: 'Roboto', sans-serif;
+}
+.ch{
+	width:16%;	
+	background-color:white;
+	padding-bottom:5px; 
+	padding-top:5px;
+	border-bottom: solid;
+	border-width: 2px;
+	border-color:#C0C0C0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.salida{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	top: 40px;
+}
+.nada{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.salir{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+	.perfil{
+		font-weight: bold;
+		position: relative;
+		margin-left: 15px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.out{
+		width: 10%;
+		background:#800000;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+#en{
+	background:#2B5FC0;
+	padding: 10px;
+	border-radius: 0px 10px 0px 10px;
+	border:none;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+}
+.filtrado{
+	padding: 10px;
+	border-radius: 10px 0px 10px 0px;
+}
+@media screen and (max-width: 500px){
+	.Tb-mayor{
+		width: 100%;
+	}
+	.Nombre{
+		width:45%;
+	}
+	.Fecha{
+		width: 32%;
+	}
+	.Hora{
+		width: 32%;
+	}
+	.Asistencia{
+		width: 33.2%;
+	}
+	.Asistencia h3{
+		font-family: 'Roboto', sans-serif;
+		margin-left:1px;
+	}	
+	.Fecha h3{
+		font-family: 'Roboto', sans-serif;
+		margin-left: 2px;
+	}	
+	.Hora h3{
+		font-family: 'Roboto', sans-serif;
+		margin-left: 2px;
+	}
+	.out{
+		width: 30%;
+	}	
+	
+}

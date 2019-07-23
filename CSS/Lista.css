@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 100%;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.Arranque{
+	width: 100%;
+	position: relative;
+	margin-top:20px;
+	margin-bottom: 20px;
+	display: flex;
+}
+.inicio{
+	width:50%;
+	display: flex;
+	justify-content:flex-start;
+}
+.home{
+	width:50%;
+	display: flex;
+	justify-content:flex-end;
+}
+.home img{
+	position: relative;
+	right: 50px;
+	width: 45px;
+}
+.Materia{
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	left:25px;
+}
+.salir{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
+	top: 90px;
+	display: flex;
+	justify-content: space-between;
+}
+.salida{
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+.botones{
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:flex-end;
+}
+	.perfil{
+		font-weight: bold;
+		position: relative;
+		margin-left: 10px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	#fec{
+		font-weight: bold;
+		position: relative;
+		margin-left: 15px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	#hor{
+		font-weight: bold;
+		position: relative;
+		margin-left: 15px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+		margin-right: 10px;
+	}
+	.out{
+		width: 20%;
+		background:#800000;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.out2{
+		width: 20%;
+		background:#0CDD19;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.out3{
+		width: 20%;
+		background:#2B5FC0;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+.centro{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin-top:50px;
+}	
+	.Tb-mayor{
+		width: 50%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+		.Nombre{
+			width:68%;	
+			background-color: black;
+			color: white;
+			padding-bottom:5px; 
+			padding-top:5px;
+			border:solid;
+			border-width: 2px;
+			border-color:#C0C0C0;
+		}
+			.Nombre h3{
+				font-family: 'Roboto', sans-serif;
+				margin-left: 15px;
+			}
+		.Asistencia{
+			width: 30%;
+			background-color: black;
+			color: white;
+			border:solid;
+			border-width: 2px;
+			border-color:#C0C0C0;
+			padding-bottom:5px; 
+			padding-top:5px;
+			border-left: 0px;
+		}
+			.Asistencia h3{
+				font-family: 'Roboto', sans-serif;
+				margin-left: 15px;
+			}	
+input[type=checkbox]{
+  -ms-transform: scale(2); 
+  -moz-transform: scale(2); 
+  -webkit-transform: scale(2);
+  -o-transform: scale(2); 
+  padding: 10px;
+  position: relative;
+  top: 2px;
+}
+.egt{
+	width:98.3%;
+	border:solid;
+	border-top: 0px;
+	border-width: 2px;
+	border-color:#C0C0C0;
+}
+.na{
+	width:68%;	
+	background-color:white;
+	padding-bottom:5px; 
+	padding-top:5px;
+	border-bottom: solid;
+	border-width: 2px;
+	border-color:#C0C0C0;
+	font-family: 'Roboto', sans-serif;
+}
+.ch{
+	width: 30%;	
+	padding-bottom:5px; 
+	padding-top:5px;
+	border-left:solid;
+	border-bottom:solid;
+	border-width: 2px;
+	border-color:#C0C0C0;
+}
+@media screen and (max-width: 500px){
+	.Tb-mayor{
+		width: 95%;
+	}
+	.salir{
+		display: block;
+	}
+	.salida{
+		width: 100%;
+	}
+	.botones{
+		width: 100%;
+		justify-content: center;
+		position: relative;
+		top: 20px;
+	}
+	.out{
+		width:25%;
+	}
+	.out2{
+		width:25%;
+	}
+	.out3{
+		width:25%;
+	}
+}

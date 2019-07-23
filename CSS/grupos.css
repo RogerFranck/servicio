@@ -1,0 +1,125 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 100%;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color:black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.inicio{
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+.inicio img{
+	position: relative;
+	right: 50px;
+	width: 45px;
+}
+.Materia{
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	left:25px;
+}
+.menu{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.Bx-mayor{
+	width: 22%;
+	height: 150px;
+	margin: 20px;
+	background-color: white;
+	border-radius: 30px 30px 30px 30px;
+}
+.bx-img{
+		width: 100%;
+		height: 100px;
+		background-color: #566E7A;
+		background-size: 100%;
+		border-radius: 27px 27px 0px  0px;
+		border:solid;
+		border-width: 2px;
+		border-color:#C0C0C0;
+		display: flex;
+		justify-content: center;
+}
+.bx-btn{
+		width: 100%;
+		height: 50px;
+		border:solid;
+		border-top: 0;
+		border-width: 2px;
+		border-color:#C0C0C0;
+		border-radius: 0px 0px 27px  27px;
+}
+.btn-inicio{
+		text-decoration: none;
+		color: black;
+		position: relative;
+		top: 15px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+}
+.Mt-name{
+		color: white;
+		position: relative;
+		top: 30px;
+		font-family: 'Roboto', sans-serif;
+}
+.salir{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
+	top: 233px;
+	display: flex;
+	justify-content: space-between;
+}
+	.perfil{
+		font-weight: bold;
+		position: relative;
+		margin-left: 15px;
+		top: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	.out{
+		width: 10%;
+		background:#800000;
+		padding: 10px;
+		border-radius: 10px 10px 10px 10px;
+		border:none;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+		position: relative;
+		margin-right:15px;
+		font-family: 'Roboto', sans-serif;
+	}
+@media screen and (max-width: 500px){
+
+	.menu{
+		display: block;
+	}
+	.Bx-mayor{
+		width: 90%;
+	}
+	.salir{
+		top:150px;	
+	}
+	.out{
+		width:30%; 
+	}
+
+
+}
