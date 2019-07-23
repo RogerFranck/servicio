@@ -55,7 +55,7 @@
 						<div class="formulario-bajo">
 
 			
-						<a href="#" class="olvido">¿Olvidaste tu contraseña?</a>
+						<a href="#" class="olvido" onclick="contacto()">¿Olvidaste tu contraseña?</a>
 						<input type="submit" value="ACEPTAR" id="OK">
 						
 
@@ -67,6 +67,11 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function contacto(){
+			alert("Contacta con el administrador");
+		}
+	</script>
 </body>
 </html>
 <?php

@@ -60,7 +60,7 @@ header{
 		flex-wrap: wrap;
 	}
 		.Nombre{
-			width:50%;	
+			width:49.5%;	
 			background-color: black;
 			color: white;
 			padding-bottom:5px; 
@@ -74,7 +74,7 @@ header{
 				margin-left: 15px;
 			}
 		.Fecha{
-			width:16%;	
+			width:15%;	
 			background-color: black;
 			color: white;
 			padding-bottom:5px; 
@@ -88,7 +88,7 @@ header{
 				margin-left: 15px;
 			}	
 		.Hora{
-			width:16%;	
+			width:15%;	
 			background-color: black;
 			color: white;
 			padding-bottom:5px; 
@@ -102,7 +102,7 @@ header{
 				margin-left: 15px;
 			}
 		.Asistencia{
-			width: 16%;
+			width: 18%;
 			background-color: black;
 			color: white;
 			border:solid;
@@ -114,10 +114,10 @@ header{
 		}
 			.Asistencia h3{
 				font-family: 'Roboto', sans-serif;
-				margin-left: 15px;
+				margin-left: 3px;
 			}	
 .egt{
-	width:99.3%;
+	width:100%;
 	border:solid;
 	border-top: 0px;
 	border-width: 2px;
@@ -134,7 +134,7 @@ header{
 	font-family: 'Roboto', sans-serif;
 }
 .fe{
-	width:16%;	
+	width:18.5%;	
 	background-color:white;
 	padding-bottom:5px; 
 	padding-top:5px;
@@ -144,7 +144,7 @@ header{
 	font-family: 'Roboto', sans-serif;
 }
 .ho{
-	width:16%;	
+	width:18.5%;	
 	background-color:white;
 	padding-bottom:5px; 
 	padding-top:5px;
@@ -154,7 +154,7 @@ header{
 	font-family: 'Roboto', sans-serif;
 }
 .ch{
-	width:16%;	
+	width:10%;	
 	background-color:white;
 	padding-bottom:5px; 
 	padding-top:5px;
@@ -219,21 +219,73 @@ header{
 	padding: 10px;
 	border-radius: 10px 0px 10px 0px;
 }
+.padre{
+	display: flex;
+  	justify-content: center;
+}
+.familia{
+	width: 30%;
+	font-family: 'Poppins', sans-serif;
+	margin-top: 45px;
+	margin-bottom:45px;
+}
+.cab{
+	border: 1px solid gray;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px 5px 0 0;
+}
+.cont{
+	width: 100%;
+	border: 1px solid gray;
+	padding: 10px;
+	border-top: 0;
+}
+.bot{
+	width: 100%;
+	border: 1px solid gray;
+	padding: 10px;
+	border-top: 0;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 0 0 5px 5px;
+}
+.btn-edit{
+	padding: 5px;
+	border:1px solid black;
+	background-color: white;
+	margin-left: 10px;
+	cursor: pointer;
+	border-radius: 5px 5px 5px 5px;
+}
+.btn-edit:hover{
+	background-color: black;
+	color: white;
+}
+.seli{
+	padding: 5px;
+	cursor: pointer;
+	margin-top: 25px;
+}
+.tla{
+	float: left;
+	font-weight: bold;
+}
 @media screen and (max-width: 500px){
 	.Tb-mayor{
 		width: 100%;
 	}
 	.Nombre{
-		width:45%;
+		width:43%;
 	}
 	.Fecha{
-		width: 15%;
+		width: 16%;
 	}
 	.Hora{
-		width: 15%;
+		width: 14%;
 	}
 	.Asistencia{
-		width: 21%;
+		width: 23%;
 	}
 	.Asistencia h3{
 		font-family: 'Roboto', sans-serif;

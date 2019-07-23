@@ -10,6 +10,8 @@
 		header("Location: index.php");
 	}
 
+	$conexion = mysqli_connect("localhost","root","","yna") or die ("problemas con la conexion");
+
  ?>
  <!DOCTYPE html>
  <html>
@@ -49,13 +51,14 @@
 					<input type="text" name="apellido2" class="caja" placeholder="Segundo apellido"><br><br>
 					<label>CURP:</label><br>
 					<input type="text" name="CURP" class="caja" placeholder="CURP"><br>
-					<select class="ele" id="hola">
+					<select class="ele" id="hola" name="hola">
 						<option value="2">Alumno</option>
 						<option value="1">Maestro</option>
 						<option value="0">Administrador</option>
 						<option value="3">Tutor</option>
 					</select>
-					<input type="button" name="envio" id="OK" value="Enviar" onclick="cambio();">
+					<input type="submit" name="envio" id="OK" value="Enviar">
+					<div class="estado" id="est"></div>
 					</form>
 				</div>
 			</div>
@@ -85,5 +88,30 @@
 			
 		}
 	</script>
+	<?php 
+
+		if ($_POST) {
+			
+			if ($_POST['nombres']!="" and $_POST['apellido1']!="" and $_POST['apellido2']!="" and $_POST['CURP']!="") {
+
+				$nombre = $_POST['nombres'];
+				$ap1 = $_POST['apellido1'];
+				$ap2 = $_POST['apellido2'];
+				$clave = $_POST['CURP'];
+
+				if ($result = mysqli_query($conexion,
+				"INSERT INTO `ynapersonas` (`Apellido1`, `Apellido2`, `Nombres`, `CURP`) VALUES ('$ap1', '$ap2', '$nombre','$clave')")) {
+				echo '<script>document.getElementById("est").innerHTML = "ENVIADO"</script>';
+				echo '<script>document.getElementById("est").style.background = "green"</script>';
+				}else{
+					echo '<script>document.getElementById("est").innerHTML = "ERROR"</script>';
+				}
+
+			}else{
+				echo '<script>document.getElementById("est").innerHTML = "INCONPLETO"</script>';
+			}
+		}
+
+	 ?>
 </body>
 </html>

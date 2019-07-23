@@ -30,6 +30,7 @@
  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -60,7 +61,7 @@
 			</div>
 			<table class="egt">
 				<?php 
-					$sq = "SELECT  ynapersonas.Apellido1, ynapersonas.Apellido2, ynapersonas.Nombres, ynalista.fecha, ynalista.hora, ynalista.asistencia From ynalista INNER JOIN ynaalumnos ON ynaalumnos.id_alumno=ynalista.id_alumno 
+					$sq = "SELECT  ynapersonas.Apellido1, ynapersonas.Apellido2, ynapersonas.Nombres, ynalista.fecha, ynalista.hora, ynalista.asistencia, ynalista.id_lista From ynalista INNER JOIN ynaalumnos ON ynaalumnos.id_alumno=ynalista.id_alumno 
 						INNER JOIN ynapersonas ON ynapersonas.id_persona=ynaalumnos.id_persona
 						WHERE ynalista.id_docente = '".$identi."' AND ynalista.id_grupos = '".$v2."' AND ynalista.id_asignatura = '".$idmateria."'";
 
@@ -74,7 +75,7 @@
 							echo '<script>document.getElementById("fil").innerHTML = "<p>Filtro: Fecha</p>"</script>';
 							// IGNORA EL PRIMER CARACTER DEL SELECT
 							$se2 = substr($filtro,1);
-							$sq = "SELECT  ynapersonas.Apellido1, ynapersonas.Apellido2, ynapersonas.Nombres, ynalista.fecha, ynalista.hora, ynalista.asistencia From ynalista INNER JOIN ynaalumnos ON ynaalumnos.id_alumno=ynalista.id_alumno 
+							$sq = "SELECT  ynapersonas.Apellido1, ynapersonas.Apellido2, ynapersonas.Nombres, ynalista.fecha, ynalista.hora, ynalista.asistencia, ynalista.id_lista From ynalista INNER JOIN ynaalumnos ON ynaalumnos.id_alumno=ynalista.id_alumno 
 							INNER JOIN ynapersonas ON ynapersonas.id_persona=ynaalumnos.id_persona
 							WHERE ynalista.id_docente = '".$identi."' AND ynalista.id_grupos = '".$v2."' AND ynalista.id_asignatura = '".$idmateria."'
 							AND ynalista.fecha = '".$se2."'";
@@ -83,7 +84,7 @@
 							echo '<script>document.getElementById("fil").innerHTML = "<p>Filtro: Alumno</p>"</script>';
 							// IGNORA EL PRIMER CARACTER DEL SELECT
 							$se2 = substr($filtro,1);
-							$sq = "SELECT  ynapersonas.Apellido1, ynapersonas.Apellido2, ynapersonas.Nombres, ynalista.fecha, ynalista.hora, ynalista.asistencia From ynalista INNER JOIN ynaalumnos ON ynaalumnos.id_alumno=ynalista.id_alumno 
+							$sq = "SELECT  ynapersonas.Apellido1, ynapersonas.Apellido2, ynapersonas.Nombres, ynalista.fecha, ynalista.hora, ynalista.asistencia, ynalista.id_lista From ynalista INNER JOIN ynaalumnos ON ynaalumnos.id_alumno=ynalista.id_alumno 
 							INNER JOIN ynapersonas ON ynapersonas.id_persona=ynaalumnos.id_persona
 							WHERE ynalista.id_docente = '".$identi."' AND ynalista.id_grupos = '".$v2."' AND ynalista.id_asignatura = '".$idmateria."'
 							AND ynaalumnos.id_alumno = '".$se2."'";
@@ -96,11 +97,12 @@
 					while ($mostrar= mysqli_fetch_array($query)) {
 
 				 ?>
-				<tr>
+				<tr> 
    			 		<td class="na"><?php echo $mostrar['Nombres']." ".$mostrar['Apellido1']." ".$mostrar['Apellido2'] ?></td>
    			 		<td class="fe"><center><?php echo $mostrar['fecha']  ?></center></td>
    			 		<td class="ho"><center><?php echo $mostrar['hora']  ?></center></td>
-    				<td class="ch"><center><?php echo $mostrar['asistencia']  ?></center></td>
+    				<td class="ch"><center><?php echo $mostrar['asistencia'] ?></center></td>
+    				<td ><a href="docenteEditar.php?mat=<?php echo $v1 ?>&pat=<?php echo $v2 ?>&cat=<?php echo $mostrar['id_lista'] ?>"><img src="https://img.icons8.com/windows/26/000000/edit.png"></a>
  				</tr> 
  				<?php } ?>
 			</table>
@@ -153,5 +155,7 @@
 			<input type="button" value="SALIR" class="out" onclick="location.href='logout.php'">
 		</div>
 		</div>
+
+		<!--<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
 </body>
 </html>

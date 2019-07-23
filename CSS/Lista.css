@@ -44,7 +44,6 @@ header{
 	padding-top: 15px;
 	padding-bottom: 15px;
 	position: relative;
-	top: 90px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -95,7 +94,7 @@ header{
 		font-family: 'Roboto', sans-serif;
 	}
 	.out2{
-		width: 20%;
+		width: 90%;
 		background:#0CDD19;
 		padding: 10px;
 		border-radius: 10px 10px 10px 10px;
@@ -196,6 +195,19 @@ input[type=checkbox]{
 	border-width: 2px;
 	border-color:#C0C0C0;
 }
+.inf{
+	font-family: 'Roboto', sans-serif;
+	margin: 10px;
+}
+#canvas-container{
+		width: 50%;
+		position: relative;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	#chart{
+		width: 90%;
+	}
 @media screen and (max-width: 500px){
 	.Tb-mayor{
 		width: 95%;
@@ -216,9 +228,15 @@ input[type=checkbox]{
 		width:25%;
 	}
 	.out2{
-		width:25%;
+		width:90%;
 	}
 	.out3{
 		width:25%;
+	}
+	#canvas-container{
+		width: 100%;
+	}
+	#chart{
+		width: 90%;
 	}
 }

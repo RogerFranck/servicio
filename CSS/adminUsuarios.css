@@ -12,6 +12,16 @@ header{
 	justify-content: center;
 	font-family: 'Open Sans', sans-serif;
 }
+.estado{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 48px;
+	background-color: red;
+	border-radius: 0 0 10px 10px;
+	font-family: 'Open Sans', sans-serif;
+}
 .home{
 	width:100%;
 	display: flex;

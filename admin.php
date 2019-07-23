@@ -60,5 +60,6 @@
 		<p class="perfil" id="p"><?php echo $p. " " .$a1. " " .$a2 ?></p>
 		<input type="button" value="SALIR" class="out" onclick="location.href='logout.php'">
 	</div>
+	<!--<a href="https://icons8.com/icon/48/editar">Editar icon by Icons8</a>-->
 </body>
 </html>

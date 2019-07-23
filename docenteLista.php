@@ -39,6 +39,8 @@
 
 
 	}
+	// CONTAR CANTIDAD DE ALUMNOS EN EL GRUPO
+	$con = count($arregloid);
 	//Verifica existencia
 	for ($i=0;$i<=50;$i++) {
 
@@ -63,6 +65,10 @@
  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ 	<!-- JQUERY -->
+ 	<script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+ 	<!-- CHART libreria -->
+ 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 </head>
 <body>
 	<header>
@@ -89,203 +95,203 @@
 				<form method="POST" id="formi">
   				<tr id="al1">
    			 		<td class="na" id="alm1"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox1" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox1" id="cbox1" value="S"></center></td>
  				</tr>
  				<tr id="al2">
    			 		<td class="na" id="alm2"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox2" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox2" id="cbox2" value="S"></center></td>
  				</tr>
  				<tr id="al3">
    			 		<td class="na" id="alm3"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox3" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox3" id="cbox3" value="S"></center></td>
  				</tr>
  				<tr id="al4">
    			 		<td class="na" id="alm4"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox4" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox4" id="cbox4" value="S"></center></td>
  				</tr>
  				<tr id="al5">
    			 		<td class="na" id="alm5"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox5" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox5" id="cbox5" value="S"></center></td>
  				</tr>
  				<tr id="al6">
    			 		<td class="na" id="alm6"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox6" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox6" id="cbox6" value="S"></center></td>
  				</tr>
  				<tr id="al7">
    			 		<td class="na" id="alm7"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox7" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox7" id="cbox7" value="S"></center></td>
  				</tr>
  				<tr id="al8">
    			 		<td class="na" id="alm8"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox8" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox8" id="cbox8" value="S"></center></td>
  				</tr>
  				<tr id="al9">
    			 		<td class="na" id="alm9"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox9" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox9" id="cbox9" value="S"></center></td>
  				</tr>
  				<tr id="al10">
    			 		<td class="na" id="alm10"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox10" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox10" id="cbox10" value="S"></center></td>
  				</tr>
  				<tr id="al11">
    			 		<td class="na" id="alm11"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox11" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox11" id="cbox11" value="S"></center></td>
  				</tr>
  				<tr id="al12">
    			 		<td class="na" id="alm12"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox12" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox12" id="cbox12" value="S"></center></td>
  				</tr>
  				<tr id="al13">
    			 		<td class="na" id="alm13"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox13" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox13" id="cbox13" value="S"></center></td>
  				</tr>
  				<tr id="al14">
    			 		<td class="na" id="alm14"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox14" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox14" id="cbox14" value="S"></center></td>
  				</tr>
  				<tr id="al15">
    			 		<td class="na" id="alm15"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox15" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox15" id="cbox15" value="S"></center></td>
  				</tr>
  				<tr id="al16">
    			 		<td class="na" id="alm16"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox16" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox16" id="cbox16" value="S"></center></td>
  				</tr>
  				<tr id="al17">
    			 		<td class="na" id="alm17"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox17" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox17" id="cbox17" value="S"></center></td>
  				</tr>
  				<tr id="al18">
    			 		<td class="na" id="alm18"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox18" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox18" id="cbox18" value="S"></center></td>
  				</tr>
  				<tr id="al19">
    			 		<td class="na" id="alm19"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox19" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox19" id="cbox19" value="S"></center></td>
  				</tr>
  				<tr id="al20">
    			 		<td class="na" id="alm20"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox20" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox20" id="cbox20" value="S"></center></td>
  				</tr>
  				<tr id="al21">
    			 		<td class="na" id="alm21"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox21" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox21" id="cbox21" value="S"></center></td>
  				</tr>
  				<tr id="al22">
    			 		<td class="na" id="alm22"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox22" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox22" id="cbox22" value="S"></center></td>
  				</tr>
  				<tr id="al23">
    			 		<td class="na" id="alm23"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox23" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox23" id="cbox23" value="S"></center></td>
  				</tr>
  				<tr id="al24">
    			 		<td class="na" id="alm24"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox24" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox24" id="cbox24" value="S"></center></td>
  				</tr>
  				<tr id="al25">
    			 		<td class="na" id="alm25"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox25" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox25" id="cbox25" value="S"></center></td>
  				</tr>
  				<tr id="al26">
    			 		<td class="na" id="alm26"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox26" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox26" id="cbox26" value="S"></center></td>
  				</tr>
  				<tr id="al27">
    			 		<td class="na" id="alm27"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox27" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox27" id="cbox27" value="S"></center></td>
  				</tr>
  				<tr id="al28">
    			 		<td class="na" id="alm28"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox28" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox28" id="cbox28" value="S"></center></td>
  				</tr>
  				<tr id="al29">
    			 		<td class="na" id="alm29"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox29" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox29" id="cbox29" value="S"></center></td>
  				</tr>
  				<tr id="al30">
    			 		<td class="na" id="alm30"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox30" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox30" id="cbox30" value="S"></center></td>
  				</tr>
  				<tr id="al31">
    			 		<td class="na" id="alm31"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox31" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox31" id="cbox31" value="S"></center></td>
  				</tr>
  				<tr id="al32">
    			 		<td class="na" id="alm32"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox32" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox32" id="cbox32" value="S"></center></td>
  				</tr>
  				<tr id="al33">
    			 		<td class="na" id="alm33"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox33" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox33" id="cbox33" value="S"></center></td>
  				</tr>
  				<tr id="al34">
    			 		<td class="na" id="alm34"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox34" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox34" id="cbox34" value="S"></center></td>
  				</tr>
  				<tr id="al35">
    			 		<td class="na" id="alm35"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox35" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox35" id="cbox35" value="S"></center></td>
  				</tr>
  				<tr id="al36">
    			 		<td class="na" id="alm36"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox36" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox36" id="cbox36" value="S"></center></td>
  				</tr>
  				<tr id="al37">
    			 		<td class="na" id="alm37"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox37" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox37" id="cbox37" value="S"></center></td>
  				</tr>
  				<tr id="al38">
    			 		<td class="na" id="alm38"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox38" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox38" id="cbox38" value="S"></center></td>
  				</tr>
  				<tr id="al39">
    			 		<td class="na" id="alm39"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox39" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox39" id="cbox39" value="S"></center></td>
  				</tr>
  				<tr id="al40">
    			 		<td class="na" id="alm40"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox40" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox40" id="cbox40" value="S"></center></td>
  				</tr>
  				<tr id="al41">
    			 		<td class="na" id="alm41"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox41" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox41" id="cbox41" value="S"></center></td>
  				</tr>
  				<tr id="al42">
    			 		<td class="na" id="alm42"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox42" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox42" id="cbox42" value="S"></center></td>
  				</tr>
  				<tr id="al43">
    			 		<td class="na" id="alm43"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox43" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox43" id="cbox43" value="S"></center></td>
  				</tr>
  				<tr id="al44">
    			 		<td class="na" id="alm44"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox44" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox44" id="cbox44" value="S"></center></td>
  				</tr>
  				<tr id="al45">
    			 		<td class="na" id="alm45"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox45" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox45" id="cbox45" value="S"></center></td>
  				</tr>
  				<tr id="al46">
    			 		<td class="na" id="alm46"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox46" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox46" id="cbox46" value="S"></center></td>
  				</tr>
  				<tr id="al47">
    			 		<td class="na" id="alm47"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox47" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox47" id="cbox47" value="S"></center></td>
  				</tr>
  				<tr id="al48">
    			 		<td class="na" id="alm48"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox48" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox48" id="cbox48" value="S"></center></td>
  				</tr>
  				<tr id="al49">
    			 		<td class="na" id="alm49"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox49" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox49" id="cbox49" value="S"></center></td>
  				</tr>
  				<tr id="al50">
    			 		<td class="na" id="alm50"></td>
-    				<td class="ch"><center><input type="checkbox" name="cbox50" value="S"></center></td>
+    				<td class="ch"><center><input type="checkbox" name="cbox50" id="cbox50" value="S"></center></td>
  				</tr>
 
 				<input type="hidden" name="fecha" id="fecha">
@@ -295,6 +301,13 @@
 			</table>
 		</div>
 	</div>
+	<!--CONTENEDOR PARA GRAFICAS-->
+	<center>
+	<div id="canvas-container">
+		
+	</div>
+	</center>
+	<!--FIN DE CONTENEDOR PARA GRAFICAS-->
 	<div class="salir">
 		<div class="salida">
 			<p class="perfil" id="p"><?php echo $p. " " .$a1. " " .$a2 ?></p>
@@ -302,13 +315,16 @@
 			<p id="hor"></p>
 		</div>
 		<div class="botones">
-			<input type="submit" form="formi" value="GUARDAR" class="out2" onclick="GUARDAR()">
+			<div id="confirmar">
+			<input type="button" form="formi" value="GUARDAR" class="out2"  onclick="GUARDAR()">
+			</div>
 			<input type="button" value="CONSULTAR" class="out3" onclick="location.href='docenteConsulta.php?mat=<?php echo $v1 ?>&pat=<?php echo $v2 ?>'">
 			<input type="button" value="SALIR" class="out" onclick="location.href='logout.php'">
 		</div>
 	</div>
 </body>
 <script>
+	
 	var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 	var f=new Date();
 	var fecha = f.getDate() + "/" + meses[f.getMonth()] + "/" + f.getFullYear();
@@ -622,7 +638,113 @@
 		document.getElementById('alm50').innerHTML = "<p><?php 	 echo $m[49] ?></p>"; 
 	}
 
+	function GUARDAR(){
 
+		const grafica = document.createElement('canvas');
+		grafica.setAttribute('id','chart');
+		document.getElementById('canvas-container').appendChild(grafica);
+
+		$(document).ready(function(){
+		var canti = "<?php echo $con ?>"
+
+		var contar = 0;
+		var cont = [];
+		cont[0] = document.getElementById('cbox1').checked;
+		cont[1] = document.getElementById('cbox2').checked;
+		cont[2] = document.getElementById('cbox3').checked;
+		cont[3] = document.getElementById('cbox4').checked;
+		cont[4] = document.getElementById('cbox5').checked;
+		cont[5] = document.getElementById('cbox6').checked;
+		cont[6] = document.getElementById('cbox7').checked;
+		cont[7] = document.getElementById('cbox8').checked;
+		cont[8] = document.getElementById('cbox9').checked;
+		cont[9] = document.getElementById('cbox10').checked;
+		cont[10] = document.getElementById('cbox11').checked;
+		cont[11] = document.getElementById('cbox12').checked;
+		cont[12] = document.getElementById('cbox13').checked;
+		cont[13] = document.getElementById('cbox14').checked;
+		cont[14] = document.getElementById('cbox15').checked;
+		cont[15] = document.getElementById('cbox16').checked;
+		cont[16] = document.getElementById('cbox17').checked;
+		cont[17] = document.getElementById('cbox18').checked;
+		cont[18] = document.getElementById('cbox19').checked;
+		cont[19] = document.getElementById('cbox20').checked;
+		cont[20] = document.getElementById('cbox21').checked;
+		cont[21] = document.getElementById('cbox22').checked;
+		cont[22] = document.getElementById('cbox23').checked;
+		cont[23] = document.getElementById('cbox24').checked;
+		cont[24] = document.getElementById('cbox25').checked;
+		cont[25] = document.getElementById('cbox26').checked;
+		cont[26] = document.getElementById('cbox27').checked;
+		cont[27] = document.getElementById('cbox28').checked;
+		cont[28] = document.getElementById('cbox29').checked;
+		cont[29] = document.getElementById('cbox30').checked;
+		cont[30] = document.getElementById('cbox31').checked;
+		cont[31] = document.getElementById('cbox32').checked;
+		cont[32] = document.getElementById('cbox33').checked;
+		cont[33] = document.getElementById('cbox34').checked;
+		cont[34] = document.getElementById('cbox35').checked;
+		cont[35] = document.getElementById('cbox36').checked;
+		cont[36] = document.getElementById('cbox37').checked;
+		cont[37] = document.getElementById('cbox38').checked;
+		cont[38] = document.getElementById('cbox39').checked;
+		cont[39] = document.getElementById('cbox40').checked;
+		cont[40] = document.getElementById('cbox41').checked;
+		cont[41] = document.getElementById('cbox42').checked;
+		cont[42] = document.getElementById('cbox43').checked;
+		cont[43] = document.getElementById('cbox44').checked;
+		cont[44] = document.getElementById('cbox45').checked;
+		cont[45] = document.getElementById('cbox46').checked;
+		cont[46] = document.getElementById('cbox47').checked;
+		cont[47] = document.getElementById('cbox48').checked;
+		cont[48] = document.getElementById('cbox49').checked;
+		cont[49] = document.getElementById('cbox50').checked;
+
+		var i;
+		for (i = 0; i < 49; i++) {
+			if (cont[i] == true) {
+				contar = contar+1;
+			}
+		}
+
+		var patata = canti - contar;
+
+		// papata guarda la cantidad de alumnos que faltaron
+		// contar guarda la cantidad de alumnos con asistencia
+		// canti guarda el total de alumnos
+
+		var datos = {
+			type: "pie",
+			data : {
+				datasets :[{
+					data : [
+						contar,
+						patata,
+					],
+					backgroundColor: [
+						"#F7464A",
+						"#46BFBD",
+					],
+				}],
+				labels : [
+					"Asistencias",
+					"Faltas",
+				]
+			},
+			options : {
+				responsive : true,
+			}
+		};
+
+		var canvas = document.getElementById('chart').getContext('2d');
+		window.pie = new Chart(canvas, datos);
+
+
+	});
+
+	document.getElementById('confirmar').innerHTML = "<input type='submit' form='formi' value='GUARDAR' class='out2'>";	
+
+	}
 
 </script>
 <?php 
